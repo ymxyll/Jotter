@@ -1,0 +1,21 @@
+# 端口配置
+server:
+  port: 8443
+
+# 数据源配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/wj?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    initialization-mode: always #每次运行时初始化数据库
+    username: # your username
+    password: # your password
+  jpa:
+    hibernate:
+      ddl-auto: update #实时更新数据库中的表
+    properties:
+      hibernate:
+        show_sql: true
+        enable_lazy_load_no_trans: true
+
+    open-in-view: true
+
