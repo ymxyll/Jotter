@@ -54,6 +54,12 @@
       return {
         items: [
         {
+          id: 1,
+          title: '',
+          img: '../../../static/img/carousel/2.png',
+          link: 'https://www.bilibili.com/bangumi/play/ep29876/?share_source=copy_web'
+        },
+        {
           id: 2,
           title: 'Vue.js - 渐进式 JavaScript 框架',
           img: '../../../static/img/carousel/vue.png',
@@ -63,7 +69,7 @@
           id: 3,
           title: 'element-ui - 网站快速成型工具',
           img: '../../../static/img/carousel/element.png',
-          link: 'http://element-cn.eleme.io/#/zh-CN'
+          link: 'https://element.eleme.cn/'
         }]
       }
     }

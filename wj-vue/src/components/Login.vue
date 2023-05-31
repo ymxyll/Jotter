@@ -39,7 +39,7 @@
     methods: {
       login () {
         var _this = this
-        console.log(this.$store.state)
+        // console.log(this.$store.menus)
         this.$axios
           .post('/login', {
             username: this.loginForm.username,

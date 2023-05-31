@@ -60,12 +60,14 @@
             email: this.loginForm.email
           })
           .then(resp => {
+            console.log(resp)
             if (resp.data.code === 200) {
               this.$alert('注册成功', '提示', {
                 confirmButtonText: '确定'
               })
               _this.$router.replace('/login')
             } else {
+              // console.log(resp)
               this.$alert(resp.data.message, '提示', {
                 confirmButtonText: '确定'
               })

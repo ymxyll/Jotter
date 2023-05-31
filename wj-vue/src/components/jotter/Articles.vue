@@ -9,11 +9,11 @@
             <el-divider content-position="left">{{article.articleDate}}</el-divider>
             <router-link class="article-link" :to="{path:'jotter/article',query:{id: article.id}}"><p>{{article.articleAbstract}}</p></router-link>
           </div>
-          <el-image
+          <!-- <el-image
             style="margin:18px 0 0 30px;width:100px;height: 100px"
             :src="article.articleCover"
-            fit="cover"></el-image>
-          <el-divider></el-divider>
+            fit="cover"></el-image> -->
+          <!-- <el-divider></el-divider> -->
         </div>
       </el-card>
     </div>
@@ -45,10 +45,11 @@
       loadArticles () {
         var _this = this
         this.$axios.get('/article/' + this.pageSize + '/1').then(resp => {
+          // console.log(resp)
           if (resp && resp.data.code === 200) {
             console.log()
             _this.articles = resp.data.data.content
-            _this.total = resp.data.totalElements
+            _this.total = resp.data.data.totalElements
           }
         })
       },
